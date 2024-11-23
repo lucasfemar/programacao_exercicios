@@ -1,0 +1,24 @@
+body {
+    background: #6e28d9;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+.carro{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    height: 300px;
+    width: 3000px;
+    object-fit: fill;
+}
+
+.panorama{
+  position: top;
+ width: 100%;
+ overflow: hidden;
+ height: 400px; 
+}

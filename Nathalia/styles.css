@@ -1,0 +1,53 @@
+body {
+    display: flex; /* Define que o corpo da página será flexível, permitindo alinhar itens facilmente */
+    flex-direction: column; /* Alinhar os itens em coluna */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    margin: 0; /* Remove margens padrão */
+    font-family: Arial, sans-serif; /* Define a fonte padrão da página */
+}
+
+.imagem-panoramica {
+    width: 100%; /* Largura das imagens da galeria*/
+    height: auto; /* Mantém a proporção original da imagem */
+    display: block; /* Faz a imagem ser tratada como um bloco */
+    margin: 0; /* Remove margens para ocupar a largura total */
+}
+
+.galeria {
+    display: flex; 
+    justify-content: center; /* Centraliza as imagens horizontalmente */
+    flex-wrap: wrap; /* Permite que os itens se movam para a próxima linha se necessário*/
+    margin-top: 20px; /* Espaço acima da galeria */
+}
+
+.galeria figure {
+    margin: 10px; /* Espaço entre as figuras (imagens e legendas) */
+    text-align: center; /* Centraliza o texto dentro de cada figura */
+    position: relative; /* Permite posicionar elementos dentro da figura */
+}
+
+.conteudo {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; /* Centraliza os itens horizontalmente */
+}
+
+.galeria img {
+    width: 180px; 
+    border-radius: 8px; /* Arredonda os cantos das imagens */
+}
+
+legenda {
+    margin-top: 5px;
+}
+
+.descricao {
+    width: 180px; 
+    height: auto; 
+    border: none; /* Remove a borda do campo de descrição */
+    margin-top: 5px; 
+    padding: 5px; /* Espaço interno dentro do campo de descrição */
+    background-color: transparent; /* Faz o fundo ficar transparente */
+    box-shadow: none; /* Remove qualquer sombra ao redor do campo */
+    text-align: center; 
+}
