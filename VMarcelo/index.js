@@ -27,7 +27,25 @@ console.log(Array.isArray(frutas))
 
 // Trazer - o que é função, loops e condionais ***array
 
+// função
+
 function square (numero) {
     return numero * numero;
     
+}
+
+// Loops
+
+for (let i = 0; i < 5; i++) {
+    console.log("O número é " + i);
+}
+
+// condicionais (If; If...Else; If... Else If...Else; Switch)
+
+let hora = 15;
+
+if (hora < 12) {
+  console.log("Bom dia!");
+} else {
+  console.log("Boa tarde!");
 }
