@@ -54,10 +54,8 @@ console.log(frutas[4]);
 console.log(typeof frutas[0]);
 
 // Loops;
-console.log('\n***** Loops *****');
-for (let count = 0; count < frutas.length; count++) {
-    console.log('Posição: ', count);
-    console.log(frutas[count]); //fruntas[3]
+console.log('\n***** Arrays *****');
+const frutas = ['banana', 'abacaxi', 'melão'] //fruntas[3]
 }
 let count = 0;
 do {
