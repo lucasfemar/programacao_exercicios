@@ -26,3 +26,8 @@ console.log(Array.isArray(pessoa))
 console.log(Array.isArray(frutas))
 
 // Trazer - o que é função, loops e condionais ***array
+
+function square (numero) {
+    return numero * numero;
+    
+}
