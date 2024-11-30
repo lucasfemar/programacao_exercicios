@@ -18,18 +18,42 @@ if (idade<=17) {
 } */
 
 /* 3 - Loops: Crie um loop que imprima todos os números de 1 a 100.
+console.log('EXERCICIO 3: \n')
 var count;
 for (count=0; count <= 100; count++) {
   console.log(count)
 } */
 
 /*4 - Funções: Escreva uma função que aceite dois números como argumentos e retorne sua soma.
-
-var a = 30;
-var b = 7;
-
 function soma(a, b) {
     return a+b;
 }
+console.log('EXERCICIO 4: \n')    
+console.log(soma(15, 30)) */
 
-console.log(soma) */
+/* 5 - Funções: Desenvolva uma função que receba um número como parâmetro e verifique se ele é par ou ímpar. Retorne true se for par e false se for ímpar. 
+console.log('EXERCICIO 5: \n')
+const n = 15;
+
+if (n%2 == 0){
+  console.log(n, "é um numero par");
+} else{ 
+  console.log(n, "é um numero impar")  
+} */
+/* 6 - Arrays: Escreva um programa que declare um array de suas frutas favoritas e imprima cada fruta na lista usando um loop.
+const frutas = ['uva passa','banana','melão', 'morango']
+for(let count = 0; count< frutas.length; count++){
+  console.log(frutas[count])
+  } */
+
+  function fib(n) {
+    if (n == 1) {
+      console.log('o numero é 0');
+    } else if (n == 2) {
+      console.log('o numero é 1');
+    } else{
+      console.log(fib(n - 1) + fib(n - 2)) ;
+    }
+  }
+  
+  fib(5);
