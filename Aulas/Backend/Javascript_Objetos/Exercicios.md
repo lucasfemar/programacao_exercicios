@@ -50,3 +50,22 @@ console.log(anotherStudent);
 3. Como você faria para criar uma **cópia independente** de `student` que não compartilhe o mesmo endereço de memória?
 
 **Dica:** Tente executar o código em seu editor e observe os resultados.
+
+## Exercício 3: Loop em objetos
+
+Utilize uma função nativa de objetos que faça um loop mostrando o valor de cada propriedade do objeto **car**.
+
+```js
+const car = {
+    model: 'Uno',
+    ano: 2015,
+    cor: 'azul',
+    fabricante: 'Fiat',
+};
+```
+
+**Expectatvica**
+
+-   Propriedade: Valor
+-   model: Uno
+-   cor: azul
