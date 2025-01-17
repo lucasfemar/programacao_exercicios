@@ -49,12 +49,12 @@ Quando você cria um objeto com `Object.create`, você pode especificar diretame
 
 ```javascript
 const gato = Object.create(animal);
-cat.miau = function() {
+gato.miar = function() {
   console.log("Miau!");
 };
 
-cat.comer(); // Saída: "Esse animal esta comendo"
-cat.miau(); // Saída: "Miau!"
+gato.comer(); // Saída: "Esse animal esta comendo"
+gato.miar(); // Saída: "Miau!"
 ```
 
 ---
@@ -67,7 +67,7 @@ function Pessoa(nome) {
   this.nome = nome;
 }
 
-Person.prototype.cumprimento = function() {
+Pessoa.prototype.cumprimento = function() {
   console.log(`Ola, meu nome é ${this.nome}`);
 };
 
@@ -115,3 +115,5 @@ console.log(obj.toString); // undefined
 ## Conclusão
 Os protótipos são um dos conceitos centrais do JavaScript e permitem a reutilização de propriedades e métodos entre objetos. Eles são especialmente úteis no contexto de herança e compartilhamento de comportamento.
 
+### Sugestão de conteúdo
+https://www.youtube.com/watch?v=cSFskNH1E5k
