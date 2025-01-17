@@ -22,10 +22,13 @@ console.log(carro.rodas)
 const pessoa = {
     nome: 'Nome Padrão',
     cumprimento: function() {
-        console.log(`Olá, meu nome é ${this.nome}`)
+        console.log(`Ola! Eu sou ${this.nome}. Prazer em conhece-lo!`);
     }
 }
 
 const estudante = Object.create(pessoa);
 estudante.nome = 'Alice';
 estudante.cumprimento(); //4 - será exibido a função cumprimento com o nome Alice
+
+/* 6 - a mensagem da função cumprimento mudou e buscou no prototipo 
+de "estudante" que é "pessoa" e imprimiu a mensagem*/
