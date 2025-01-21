@@ -23,7 +23,8 @@ for (var intem in meucarro) {                           Itera sobre as proprieda
 console.log('\nUsando Object.entries():');                /*
 Object.entries(meucarro).forEach(function([key, value]) {           Retorna um array de pares [chave, valor] do objeto.
   console.log(key + ": " + value);                        */
-});                                                             
+});     
+// teste                                                        
 
 
 
