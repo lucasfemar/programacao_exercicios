@@ -2,7 +2,7 @@
 
 Callbacks são funções que passamos como parametros para outra função. A função parâmetro sera usada após o processamento da função pai.
 
-Por exemplo. Vamos supor que após o calculo de dois numeros a gente queira mostrar na tela. Poderiamos criar uma função que faz a soma e outra função que mostra o dado na tela. Ao invés de chamar as duas funções separadamente fazemos com que uma chama a outra.
+Vamos supor que após o calculo de dois numeros a gente queira mostrar na tela. Poderiamos criar uma função que faz a soma e outra função que mostra o dado na tela. Ao invés de chamar as duas funções separadamente fazemos com que uma chama a outra.
 
 ```js
 function somar(a, b, meuCallback) {
