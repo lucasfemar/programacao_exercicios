@@ -1,10 +1,18 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
+    
 
-header{
-    background-color: ;
-    flex-direction: ;
+.div-figure {
+    float: right;
+    text-align: center;
+    width: 220px;
 }
 
+.imagem-principal {
+    width: 200px;
+    height: 350px;
+    text-align: center;
+    
+}
