@@ -1,8 +1,9 @@
 //## 1 - Crie uma função chamada `soma` que recebe dois números como parâmetros e retorna a soma deles, em seguida mostre o resutlado no console.
-function somar (f,d){
+function soma (f,d){
     return d+f;
+ }
     console.log(`O valor da soma é ${soma(40,70)}`);
-}
+
 
 
 //## 2 - Crie um objeto chamado `pessoa` com as propriedades: `nome`, `idade` e `cidade`. Depois, crie uma função que altera a cidade da pessoa para um novo valor passado como parâmetro. Mostre no console o valor da cidade antes e depois da mundança.
