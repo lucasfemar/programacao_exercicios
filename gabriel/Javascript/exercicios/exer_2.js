@@ -1,13 +1,14 @@
-pessoa = {
+const p = {
     nome: "Gabriel",
     idade: 21,
     cidade: "SP"
 }
 
-//entender como fazer uma funcão para mudar a cidade do objeto
-function novacidade(pessoa) {
-    console.log("cidade antiga: "+ pessoa.cidade) //printa a cidade antiga
-    pessoa.cidade = //mudar a cidade?
+
+function trocarCidade(pessoa, novacidade) {
+    pessoa.cidade = novacidade
 }
 
-console.log(pessoa)
+console.log("Cidade antiga: "+ p.cidade)
+trocarCidade(p, "Rio de janeiro")
+console.log("Cidade nova: "+ p.cidade)
