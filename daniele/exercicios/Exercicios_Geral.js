@@ -37,13 +37,18 @@ alterarcidade("Rio de Janeiro");
     console.log(verificaridade(12));
    
 //## 5 - Crie um array chamado `numeros` contendo 5 números diferentes. Depois, escreva uma função que recebe esse array e retorna a soma de todos os números e mostre o retorno no console.
-
+const numeros= [12,33,45,56,22];
+function somaArray(arr){
+    let soma = arr.reduce((acumulador,valoraAtual) => acumulador + valorAtual,0);
+    return soma;
+}
+console.log(`o resultado da soma do array é : ${somaArray(numeros)}`);
  
 
 //## 6 - Crie uma função que recebe um valor numérico e retorno se verdadeiro se o numero for par, e falso se o numero for impar, depois mostre na tela se o numero é par ou impar.
 function ehpar(numero){
-return numero % 2===0;   // Se numero % 2 === 0, o número é par e a função retorna true.
-}                       //Se numero % 2 !== 0, o número é ímpar e a função retorna false.
+return numero % 2===0;   
+}
 const numeroteste= 2;
 if (ehpar(numeroteste)){
  console.log(`verdadeiro, o numero ${numeroteste} é par.`);
@@ -54,4 +59,20 @@ if (ehpar(numeroteste)){
 
 
 //## 7 - Desafio Sequência de Números
-
+function sequenciadenumeros(n){
+    let resultado= [];
+    for (let i =1; i<= n; i++){
+        if(i% 3=== 0 && i % 5=== 0){
+            resultado.push("FIZZBUZZ");
+        }else if( i% 3===0) {
+            resultado.push("FIZZ");
+        }else if(i% 5 ===0){
+            resultado.push("BUZZ");
+        }
+        else{
+    resultado.push(i);
+}
+        }
+        return resultado;
+    }
+console.log(sequenciadenumeros(20));
