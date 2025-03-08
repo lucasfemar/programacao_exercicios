@@ -1,9 +1,14 @@
-pessoa = {
+const p = {
     nome: "Gabriel",
     idade: 21,
     cidade: "SP"
 }
 
-pessoa.nova_cidade = "Minas Gerais"
 
-console.log(pessoa)
+function trocarCidade(pessoa, novacidade) {
+    pessoa.cidade = novacidade
+}
+
+console.log("Cidade antiga: "+ p.cidade)
+trocarCidade(p, "Rio de janeiro")
+console.log("Cidade nova: "+ p.cidade)
