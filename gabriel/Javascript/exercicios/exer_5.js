@@ -1,7 +1,7 @@
 let numeros = [10, 2, 3, 4, 1];
 
 let resultado = 0;
-function somaArray(array) {
+function somaArray() {
     numeros.forEach(num => {
         resultado += num;
     })
