@@ -8,6 +8,12 @@ const rl = readline.createInterface({
     output: process.stdout
 });
 
+const listaDeCompras = []
+//const = variável imutável
+//var = variável global que pode ser usada fora do escopo
+//let = variável regional, sendo usada apenas dentro do escopo
+//escopo = bloco de código, representado por {}
+
 function showMenu() { // função criada manualmente.
     console.log("===== Lista de Compras ====")
     console.log("| 1 - Adicionar item     |")
@@ -17,15 +23,25 @@ function showMenu() { // função criada manualmente.
     console.log("===========================")
 }
 
-function processarOptions() {
+function processOptions() {
     showMenu();
-    rl.question("Digite o nome do item: ", (option) => {  //--> variável sempre letra minuscula. 
+    rl.question("Digite a sua opção: ", (option) => {  //--> variável sempre letra minuscula. 
         switch (option) {
             case "1":
-                console.log("Eu escolhi a opção 1");
+                rl.question("Digite o nome do item: ", (item) => {
+                    if (item != null) {
+                        listaDeCompras.push(item.trim()); //push adiciona o item no final da lista (listaDeCompras) |trim retira espaços antes de depois do item adicionado
+                    }
+                    processOptions();
+                });
                 break;
             case "2":
-                console.log("Eu escolhi a opção 2");
+                rl.question("Exibindo itens: ", (item) => {
+                    listaDeCompras.forEach((item, index) => {
+                        console.log(`\n| ${index + 1} ${item}`);
+                    });
+                    processOptions();
+                });
                 break;
             case "3":
                 console.log("Eu escolhi a opção 3");
@@ -39,7 +55,7 @@ function processarOptions() {
 
 console.log("Programa de lista de compra")
 console.log("Use Ctrl + C para sair a qualquer momento\n")
-processarOptions();
+processOptions();
 
 
 // const issoEUmaFuncao = xpto(); --> precisa de () para representar uma função, mas não necessariamente precisa de um parâmetro.
