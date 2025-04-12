@@ -1,6 +1,18 @@
 // escrever um programa de lista de compras.
 // precisamos de um menu com 4 opções, 1- adicionar item, 2- exibir lista, 3- remover item e 4- sair.
 // conceitos a praticar, função, array, loop foreach e switch, biblioteca javascript (readline, trim, push) métodos recursivos.
+// const = variável imutável
+// var = variável global que pode ser usada fora do escopo
+// let = variável regional, sendo usada apenas dentro do escopo
+// escopo = bloco de código, representado por {}
+// recursividade = é quando uma função chama ela mesma, até cumprir um objetivo (forma de loop)
+// if("condição"){
+//     console.log("condição 1")
+// } else if("condição"){
+//     console.log("condição 2")
+// } else{
+//     console.log("condição 3")
+// }
 
 const readline = require("readline"); // função javascript.
 const rl = readline.createInterface({
@@ -9,13 +21,10 @@ const rl = readline.createInterface({
 });
 
 const listaDeCompras = []
-//const = variável imutável
-//var = variável global que pode ser usada fora do escopo
-//let = variável regional, sendo usada apenas dentro do escopo
-//escopo = bloco de código, representado por {}
+
 
 function showMenu() { // função criada manualmente.
-    console.log("===== Lista de Compras ====")
+    console.log("========== Menu ==========")
     console.log("| 1 - Adicionar item     |")
     console.log("| 2 - Exibir item        |")
     console.log("| 3 - Remover item       |")
@@ -36,18 +45,39 @@ function processOptions() {
                 });
                 break;
             case "2":
-                rl.question("Exibindo itens: ", (item) => {
-                    listaDeCompras.forEach((item, index) => {
-                        console.log(`\n| ${index + 1} ${item}`);
+                if(listaDeCompras.length === 0){ 
+                    console.log("A lista está vazia")
+                } else {
+                    rl.question("Digite para exibir os itens: ", (item) => {
+                        listaDeCompras.forEach((item, index) => {
+                            console.log(`\n| ${index + 1} ${item}`);
+                        });
+                        processOptions();
                     });
-                    processOptions();
-                });
+                }
                 break;
             case "3":
-                console.log("Eu escolhi a opção 3");
+                if(listaDeCompras.length === 0){
+                    console.log("\n A lista está vazia! Nada para remover");
+                    processOptions();
+                } else {
+                    rl.question("Digite o nome do item para remover: ", (itemRemover) => {
+                        const index = listaDeCompras.indexOf(itemRemover);
+                        if(index !== -1) {
+                            listaDeCompras.splice(index, 1);
+                            console.log("| Removi o item " + itemRemover);
+                        } else {
+                            console.log("Item não encontrado na lista");
+                        }
+                        processOptions();
+                    });
+                }
+                    
+
                 break;
             case "4":
-                console.log("Eu escolhi a opção 4");
+                console.log("\n Encerrando programa..."); // close
+                rl.close();
                 break;
         }
     });
@@ -60,3 +90,4 @@ processOptions();
 
 // const issoEUmaFuncao = xpto(); --> precisa de () para representar uma função, mas não necessariamente precisa de um parâmetro.
 // const issoNaoEUmaFuncao = xpto; --> não tem um (), logo não é uma função.
+// parâmetro é o que vai dentro do () da função = function(parâmetro)
