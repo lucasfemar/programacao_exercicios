@@ -8,43 +8,82 @@ const rl = readline.createInterface({
     output: process.stdout
 });
 
-const listaDeCompras = [] 
-//const  = uma variavel imutável 
-//var    = uma variavel global que pode ser usada fora do escopo
-//let    = variavel local usada somente dentro do escopo
-//escopo = bloco de código limitado pelas chaves {}
+const listaDeCompras = []
+// const  = uma variavel imutável 
+// var    = uma variavel global que pode ser usada fora do escopo
+// let    = variavel local usada somente dentro do escopo
+// escopo = bloco de código limitado pelas chaves {}
+// recursividade é uma se chama ela mesma até cumprir um objetivo (forma de loop)
+//parametro = valor esperado e passado para dentro da função
 
-function showMenu(){ //função criada manualmente
+// sintax do if
+// if('aqui é a condição'){
+//     console.log('condição 1');
+// }else if('aqui é a condição'){
+//     console.log('condição 2');
+// }else{
+//     console.log('condição final')
+// }
+
+
+function showMenu() { //função criada manualmente
     console.log('1 - Adicionar item')
     console.log('2 - Exibir lista')
     console.log('3 - Remover item')
     console.log('4 - Sair \n')
 }
 
-function processOptions(){
+function processOptions() {
     showMenu();
-    rl.question('Digite a opção: ', (option) =>{
-        switch(option){
+    rl.question('Digite a opção: ', (option) => {
+        switch (option) {
             case '1':
-                rl.question('Digite o nome do item: ', (item) =>{
-                    if(item){
+                rl.question('Digite o nome do item: ', (item) => {
+                    if (item) {
                         listaDeCompras.push(item.trim())
                     }
-                processOptions();
+                    processOptions();
                 });
                 break;
-            
+
             case '2':
-            console.log('Eu escolhi a opção 2');
-            break;
-            
+                if (listaDeCompras.length === 0) {
+                    console.log('A lista está vazia');
+                    processOptions();
+                }
+                else {
+                    listaDeCompras.forEach((item) => {
+                        console.log(item);
+                    })
+                }
+                processOptions();
+                break;
+
             case '3':
-            console.log('Eu escolhi a opção 3');
-            break;
-            
+                console.log('\n')
+                if (listaDeCompras.length === 0) {
+                    console.log('A lista está vazia!\n')
+                    processOptions();
+                }
+                else {
+                    rl.question('Digite o nome do item para remover: ', (removeItem) => {
+                        const index = listaDeCompras.indexOf(removeItem);
+
+                        if(index !== -1){
+                            listaDeCompras.splice(index, 1);
+                            console.log(`item ${removeItem} removido com sucesso\n`);
+                        } else{
+                            console.log('item não encontrado na lista')
+                        }
+                        processOptions();
+                    })
+                };
+                break;
+
             case '4':
-            console.log('Eu escolhi a opção 4');
-            break;
+                console.log('Encerrando o programa..');
+                setTimeout(rl.close, 3000)
+                break;
         }
     });
 }
