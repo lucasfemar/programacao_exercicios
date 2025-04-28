@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Formulário Didático</title>
+  <!-- Importa o CSS externo -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Container principal do formulário -->
+  <div class="form-container">
+    <h2>Cadastro</h2>
+    <form id="cadastroForm">
+      <!-- Campo Nome -->
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" required />
+
+      <!-- Campo Email -->
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+
+      <!-- Campo Idade -->
+      <label for="idade">Idade:</label>
+      <input type="number" id="idade" name="idade" min="0" required />
+
+      <!-- Campo Profissão -->
+      <label for="profissao">Profissão:</label>
+      <input type="text" id="profissao" name="profissao" required />
+
+      <!-- Campo Sexo (checkboxes para fins didáticos) -->
+      <label>Sexo:</label>
+      <div class="checkbox-group">
+        <label><input type="radio" name="sexo" value="Masculino" /> Masculino</label>
+        <label><input type="radio" name="sexo" value="Feminino" /> Feminino</label> 
+      </div>
+
+      <!-- Campo Cidade (dropdown) -->
+      <label for="cidade">Cidade:</label> 
+      <select id="cidade" name="cidade" required>
+        <option value="">Selecione uma cidade</option> 
+      </select>
+
+      <!-- Botão de envio -->
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+
+  <!-- Importa o JavaScript externo -->
+  <script src="script.js"></script>
+</body>
+</html>

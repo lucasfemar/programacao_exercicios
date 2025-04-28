@@ -1,0 +1,97 @@
+/* Zera margens e aplica o box-sizing para todos os elementos */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Estilo do corpo da página */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    height: 100vh;
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center;     /* Centraliza verticalmente */
+  }
+  
+  /* Container do formulário */
+  .form-container {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 400px; /* Define largura máxima */
+  }
+  
+  /* Título do formulário */
+  h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  /* Estilo para os rótulos dos inputs */
+  label {
+    display: block;
+    margin-top: 1rem;
+    margin-bottom: 0.3rem;
+    font-weight: bold;
+  }
+  
+  /* Estilo dos inputs de texto, número, email e select */
+  input[type="text"],
+  input[type="email"],
+  input[type="number"],
+  select {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  /* Agrupamento dos checkboxes */
+  .checkbox-group {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.5rem;
+  }
+  
+  /* Estilo do botão de envio */
+  button {
+    margin-top: 1.5rem;
+    width: 100%;
+    padding: 0.7rem;
+    border: none;
+    background-color: #4caf50;
+    color: white;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Efeito hover no botão */
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Responsividade para telas menores */
+  @media (max-width: 500px) {
+    .form-container {
+      padding: 1rem;
+    }
+  }
+
+  .form-container {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+  
+    /* Sombra mais destacada */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  
+    width: 90%;
+    max-width: 400px;
+  }
+  
+  
