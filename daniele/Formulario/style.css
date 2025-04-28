@@ -1,0 +1,103 @@
+/* Reset básico */
+* {
+  margin: 01, 5px;
+  padding: 1, 10px;
+  box-sizing: border-box;
+}
+
+
+/* Estilo geral do body */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Container principal */
+form {
+  background-color: #dce0e1;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  width: 100%;
+}
+
+/* Título */
+h1 {
+  text-align: center;
+  color: #0c0c0c;
+  margin-bottom: 20px;
+  font-size: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-bottom: 2px solid #116a53;
+}
+
+
+
+
+/* Espaçamento entre os campos */
+form div {
+  margin-bottom: 15px;
+}
+
+/* Rótulos */
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #0c0c0c;
+}
+
+/* Inputs, selects */
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+/* Radio buttons alinhados horizontalmente */
+input[type="radio"] {
+  margin-right: 5px;
+}
+
+div:nth-child(6) label {
+  display: inline;
+  margin-right: 10px;
+}
+
+/* Botão */
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.campo-sexo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.campo-sexo label {
+  font-weight: normal;
+}
