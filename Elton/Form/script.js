@@ -24,18 +24,9 @@ form.addEventListener('submit', function (e) {
   const idade = document.getElementById('idade').value;
   const profissao = document.getElementById('profissao').value;
   const cidadeSelecionada = document.getElementById('cidade').value;
-  const sexoSelecionado = ''; 
-  const radios = document.querySelectorAll('input[name="sexo"]');
-
-  radios.forEach(radio => {
-    radio.addEventListener('change', function() {
-      if (this.checked) {
-        sexoSelecionado = this.value;
-        console.log('Sexo selecionado:', this.value);
-        // aqui você pode salvar o valor em uma variável, enviar para API, etc
-      }
-    });
-  });
+  
+  // Captura o sexo selecionado
+  const sexoSelecionado = document.querySelector('input[name="sexo"]:checked')?.value || '';
 
   // Exibe os dados no console
   console.log("DADOS DO FORMULÁRIO:");
@@ -43,7 +34,6 @@ form.addEventListener('submit', function (e) {
   console.log("Email:", email);
   console.log("Idade:", idade);
   console.log("Profissão:", profissao);
-  console.log("Sexo:", this.sexoSelecionado);
+  console.log("Sexo:", sexoSelecionado);
   console.log("Cidade:", cidadeSelecionada);
- 
 });
