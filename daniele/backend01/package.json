@@ -1,0 +1,17 @@
+{
+  "name": "backend01",
+  "version": "1.0.0",
+  "main": "index.js",
+ "scripts": {
+  "start": "node index.js",
+  "test": "echo \"Error: no test specified\" && exit 1"
+}
+,
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "Projeto da aula de programação que é um formulario",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
