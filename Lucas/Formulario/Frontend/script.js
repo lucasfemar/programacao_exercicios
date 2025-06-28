@@ -57,13 +57,12 @@ form.addEventListener("submit", async function (e) {
   await criar_usuario(usuario);
 });
 
- async function criar_usuario(usuario) {
-  const response = await fetch("http://localhost:3000", {
+async function criar_usuario(usuario) {
+  const response = await fetch("https://localhost:3000/user", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
     body: JSON.stringify(usuario),
   });
-
 }
