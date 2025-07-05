@@ -3,7 +3,7 @@ import cors from "cors";
 
 const server = express();
 
-server.use(cors()); // Permitir o frontend acessar os servidor
+// server.use(cors()); // Permitir o frontend acessar os servidor
 
 server.use(express.json()); // Dizer para o servidor que vamos trabalhar com dados em JSOn
 
