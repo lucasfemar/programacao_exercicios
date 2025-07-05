@@ -52,7 +52,6 @@ form.addEventListener("submit", async function (e) {
     cidadeSelecionada,
     sexoSelecionado,
   };
-  console.log(usuario);
 
   await criar_usuario(usuario);
 });
